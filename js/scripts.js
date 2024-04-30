@@ -5,10 +5,9 @@
 */
 //
 // Scripts
-// 
+//
 
 window.addEventListener('DOMContentLoaded', event => {
-
     // Activate Bootstrap scrollspy on the main nav element
     const sideNav = document.body.querySelector('#sideNav');
     if (sideNav) {
@@ -32,3 +31,14 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+function expandContent() {
+    const expand = document.body.querySelector('.expand');
+    const button = document.body.querySelector('.expandButton');
+    if(expand.style.display === 'block') {
+        expand.style.display = 'none';
+        button.textContent = '참여 프로젝트 ▼';
+    } else {
+        expand.style.display = 'block';
+        button.textContent = '참여 프로젝트 ▲';
+    }
+}
